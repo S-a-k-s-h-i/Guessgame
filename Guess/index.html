@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-sm">
+      <div class='col-md-10 offset-md-1 mt-5'>
+         <div class="jumbotron">
+  <h1 class="display-4">Guessing Game</h1>
+  <p class="lead">We have selected a random no between 1 to 100. You have to select Low, Equal or High.
+    <ul>
+         <li>If you select high and the random no is geater than 50 .You wins else you loose</li>
+         <li>If you select equal and the random no is equals to 50 .You wins else you loose</li>
+         <li>If you select low and the random no is lower than 50 .You wins else you loose</li>
+       </ul>
+  </p>
+  <hr class="my-4">
+    <button class="high btn btn-outline-primary btn-lg ">High</button>
+       <button class="btn btn-outline-primary btn-lg equal">Equal</button>
+       <button  class="btn btn-outline-primary btn-lg low">Low</button>
+       <div class="resultpara">
+       <p class='guessedNo'></p>
+       <p class='result'></p>
+       </div>
+         </div>
+      </div>
+    </div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    <script src='guess.js'></script>
+</body>
+</html>
