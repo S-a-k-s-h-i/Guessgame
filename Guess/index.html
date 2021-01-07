@@ -6,13 +6,14 @@
     <title>Guess Game</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container-sm">
       <div class='col-md-10 offset-md-1 mt-5'>
          <div class="jumbotron">
-  <h1 class="display-4">Guessing Game</h1>
+  <h1>Guessing Game</h1>
   <p class="lead">We have selected a random no between 1 to 100. You have to select Low, Equal or High.
     <ul>
          <li>If you select high and the random no is geater than 50 .You wins else you loose</li>
@@ -21,10 +22,11 @@
        </ul>
   </p>
   <hr class="my-4">
-    <button class="high btn btn-outline-primary btn-lg ">High</button>
-       <button class="btn btn-outline-primary btn-lg equal">Equal</button>
-       <button  class="btn btn-outline-primary btn-lg low">Low</button>
-       <div class="resultpara">
+    <button class="high btn btn-primary btn-lg ">High</button>
+       <button class="btn btn-primary btn-lg equal">Equal</button>
+       <button  class="btn btn-primary btn-lg low">Low</button>
+       <hr class="my-4">
+       <div class="resultpara" id='resultp'>
        <p class='guessedNo'></p>
        <p class='result'></p>
        </div>

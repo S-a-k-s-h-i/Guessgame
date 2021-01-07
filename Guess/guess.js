@@ -5,6 +5,7 @@ var equal=document.querySelector('.equal');
 var low=document.querySelector('.low');
 var result=document.querySelector('.result');
 var guessedNo=document.querySelector('.guessedNo');
+let resetButton;
 
 high.addEventListener('click',() => {
     if(randomNumber>50){
@@ -17,6 +18,7 @@ high.addEventListener('click',() => {
                        result.textContent='You loose';
                        result.style.background='red';
                     }
+                    setGameOver();
 });
 
 equal.addEventListener('click',() => {
@@ -30,6 +32,7 @@ equal.addEventListener('click',() => {
                        result.textContent='You loose';
                        result.style.background='red';
                     }
+                    setGameOver();
 });
 
 low.addEventListener('click',() => {
@@ -42,9 +45,31 @@ low.addEventListener('click',() => {
                         guessedNo.textContent="Generated Random No: "+randomNumber;
                        result.textContent='You loose';
                        result.style.background='red';
+        
                     }
+                    setGameOver();
 });
 
+function setGameOver(){
+    high.disabled=true;
+    equal.disabled=true;
+    low.disabled=true;
+    resetButton=document.createElement('button');
+    resetButton.textContent='Start new Game';
+    resetButton.className="btn btn-secondary";
+    document.getElementById("resultp").appendChild(resetButton);
+    resetButton.addEventListener('click',reset);
+}
+
+function reset(){
+    guessedNo.textContent='';
+    result.textContent='';
+    resetButton.parentNode.removeChild(resetButton);
+    high.disabled=false;
+    equal.disabled=false;
+    low.disabled=false;
+    randomNumber=Math.floor(Math.random()*100)+1;
+}
 
 // console.log(userInput);
 // if (userInput.toLowerCase()=='high'){

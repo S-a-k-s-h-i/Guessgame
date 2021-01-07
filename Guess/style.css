@@ -2,6 +2,22 @@
     padding:0;
     margin:0;
 }
+body{
+    background-color:white;
+}
 .btn{
    margin: 10px;
+}
+h1{
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.jumbotron{
+    background-color:rgba(73,155,234,1);
+    box-shadow: 10px 10px 23px 17px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+.lead,ul{
+    color: white;
 }
